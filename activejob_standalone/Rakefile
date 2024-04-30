@@ -1,0 +1,7 @@
+desc 'do start of sidekiq'
+task :start_sidekiq do |_t, args|
+  cmd = "sidekiq -r ./do_sleep_worker.rb"
+  system(cmd)
+end
+
+
