@@ -1,0 +1,49 @@
+
+
+# Base
+drb
+dry-core
+
+clipboard
+dotenv
+nokogiri
+rake
+redis
+sidekiq
+sqlite3
+
+# Network
+faraday
+rails
+sinatra
+
+chunky_png
+rmagic
+
+
+# PDF
+poppler
+# hexapdf
+
+# Reporting
+rubyXL
+kramdown
+redcarped
+
+# Estatistica
+ruby-statistics
+descriptive-statistics
+gruff
+
+# Test
+rspec
+rdoc
+ri
+pry
+byebug
+rubocop
+cucumber
+faker
+selenium-webdriver
+
+
