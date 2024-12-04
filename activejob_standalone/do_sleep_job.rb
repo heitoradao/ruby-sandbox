@@ -5,7 +5,7 @@ require 'active_job'
 
 ActiveJob::Base.queue_adapter = :sidekiq
 
-class DoSleepWorker < ActiveJob::Base
+class DoSleepJob < ActiveJob::Base
   queue_as :default
   
   def perform(*args)
