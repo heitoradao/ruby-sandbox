@@ -1,0 +1,11 @@
+#! ruby
+# Este script lê um arquivo e transforma em base64
+# para embarcar em um markdown.
+# Autor: Heitor Jr
+
+require 'base64'
+require 'clipboard'
+
+b64 = Base64.strict_encode64 File.read ARGV.shift
+Clipboard.copy "![imagem](data:image/png;base64,#{b64})"
+
