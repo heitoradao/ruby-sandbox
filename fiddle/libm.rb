@@ -25,14 +25,3 @@ print 'pow(2, 3) == '
 # syntatic suggar
 puts pow.(2,3)  # => 8.0
 
-=begin
-class MathH
-  def floor(*args)
-    floor.(*args)
-  end
-end
-=end
-
-
-
-
