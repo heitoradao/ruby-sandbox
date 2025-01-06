@@ -1,41 +1,72 @@
 
 
-# Base
-drb
+# ------
+#  Core
+# ------
+drb (vem por padrão, mas pode estar desatualizdo)
+rake
 dry-core
+
+
+copy_image
 
 clipboard
 dotenv
-nokogiri
-rake
-redis
 sidekiq
-sqlite3
 
-# Network
+
+# ----------
+#  Database
+# ----------
+sqlite3
+redis
+
+
+# ---------
+#  Network
+# ---------
 faraday
+nokogiri
 rails
 sinatra
+grape
+bunny (rabbitmq)
 
+# ----------------------------
+#  Manipulação de imagens png
+# ----------------------------
 chunky_png
-rmagic
+rmagic (dep. gruff)
 
 
-# PDF
+# -----
+#  PDF
+# -----
 poppler
 # hexapdf
 
-# Reporting
+
+# -----------
+#  Reporting
+# -----------
 rubyXL
 kramdown
 redcarped
+terminal-table
+tty-markdown
+ruby-progressbar
 
-# Estatistica
+
+# -------------
+#  Estatistica
+# -------------
 ruby-statistics
 descriptive-statistics
 gruff
 
-# Test
+# ------
+#  Test
+# ------
 rspec
 rdoc
 ri
@@ -45,5 +76,19 @@ rubocop
 cucumber
 faker
 selenium-webdriver
+
+
+# --------
+#  Outros
+# --------
+contrane (teoria musical)
+money
+uri
+activesupport
+numo-narray
+numo-linalg
+coderay
+
+
 
 
