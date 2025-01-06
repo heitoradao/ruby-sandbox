@@ -1,6 +1,6 @@
-#! ruby
+#! /usr/bin/env ruby
 # Este script lê um arquivo e transforma em base64
-# para embarcar em um markdown.
+# para embarcar em um markdown no obsidian.
 # Autor: Heitor Jr
 
 require 'base64'
