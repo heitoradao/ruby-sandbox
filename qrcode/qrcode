@@ -1,0 +1,18 @@
+#! ruby
+# Imprime um QRCode no terminal com o conteúdo do seu clipboard.
+# Autor: Heitor Jr
+
+require 'rqrcode'
+require 'clipboard'
+
+url = Clipboard.paste
+qrcode = RQRCode::QRCode.new(url)
+
+img = qrcode.as_ansi(
+  light: "\033[47m", dark: "\033[40m",
+  fill_character: "  ",
+  quiet_zone_size: 4
+)
+
+puts img, url
+
