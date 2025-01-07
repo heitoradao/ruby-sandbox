@@ -1,0 +1,8 @@
+#! ruby
+require 'tty-markdown'
+filename = ARGV.shift
+if filename.nil? && File.exist?('README.md')
+  filename = 'README.md'
+end
+puts TTY::Markdown.parse_file(filename)
+
