@@ -21,6 +21,10 @@ valor_dolar = gets.chomp
 carteira_usd = Money.from_cents(valor_dolar.to_i, 'USD')
 carteira_brl = carteira_usd.exchange_to('BRL')
 
+
+
 puts "O valor em reais é R$ #{carteira_brl.cents}"
-IRB.start
+puts "O valor em eth = #{carteira_usd.exchange_to('ETH').cents}"
+
+# IRB.start
 
