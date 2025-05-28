@@ -4,15 +4,16 @@
 #  Core
 # ------
 drb (vem por padrão, mas pode estar desatualizdo)
+uri
 rake
-dry-core
 
 
-copy_image
-
+rouge
 clipboard
 dotenv
 sidekiq
+activesupport (date diff & convenience)
+money (conversion)
 
 
 # ----------
@@ -20,6 +21,7 @@ sidekiq
 # ----------
 sqlite3
 redis
+bunny (rabbitmq)
 
 
 # ---------
@@ -30,7 +32,6 @@ nokogiri
 rails
 sinatra
 grape
-bunny (rabbitmq)
 
 # ----------------------------
 #  Manipulação de imagens png
@@ -51,7 +52,7 @@ poppler
 # -----------
 rubyXL
 kramdown
-redcarped
+redcarpet
 terminal-table
 tty-markdown
 ruby-progressbar
@@ -64,9 +65,9 @@ ruby-statistics
 descriptive-statistics
 gruff
 
-# ------
-#  Test
-# ------
+# ---------------------
+#  Test, debug & lint
+# ----------------------
 rspec
 rdoc
 ri
@@ -76,19 +77,17 @@ rubocop
 cucumber
 faker
 selenium-webdriver
+flay
+coderay
 
 
 # --------
 #  Outros
 # --------
-contrane (teoria musical)
-money
-uri
-activesupport
+coltrane (teoria musical)
 numo-narray
 numo-linalg
-coderay
-
+dry-core
 
 
 
