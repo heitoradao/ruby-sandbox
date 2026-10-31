@@ -7,7 +7,8 @@ require 'pry'
 Dotenv.load
 
 begin
-  connection = Bunny.new(hostname: 'amqp://172.17.0.1')
+  #connection = Bunny.new(hostname: 'amqp://172.17.0.1')
+  connection = Bunny.new(hostname: 'amqp://localhost')
   # connection = Bunny.new(hostname: 'amqp://some-rabbit')
   connection.start
 
