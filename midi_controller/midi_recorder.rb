@@ -31,7 +31,7 @@ class MIDIRecorder < MIDIReader
       file.puts
 
       begin
-        @input.gets do |message, _timestamp|
+        each_message do |message, _timestamp|
           @event_count += 1
           elapsed = Time.now - @start_time
           formatted = format_event(message)
