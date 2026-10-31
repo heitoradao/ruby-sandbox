@@ -47,7 +47,14 @@ class MIDIReader
       exit 1
     end
 
-    inputs[index]
+    inputs[index].tap(&:open)
+  end
+
+  # UniMIDI's Input#gets blocks and returns [{ data: [bytes], timestamp: ms }, ...]
+  def each_message
+    loop do
+      @input.gets.each { |m| yield m[:data], m[:timestamp] }
+    end
   end
 
   def format_event(message)
@@ -121,9 +128,8 @@ class MIDIReader
     trap('INT') { stop }
 
     begin
-      @input.gets do |_message, timestamp|
-        # UniMIDI returns an array of bytes and timestamp
-        puts "[#{Time.now.strftime('%H:%M:%S.%L')}] #{format_event(_message)}"
+      each_message do |message, _timestamp|
+        puts "[#{Time.now.strftime('%H:%M:%S.%L')}] #{format_event(message)}"
       end
     ensure
       stop

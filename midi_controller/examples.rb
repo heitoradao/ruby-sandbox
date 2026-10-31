@@ -21,7 +21,7 @@ class EventFilterReader < MIDIReader
     trap('INT') { stop }
 
     begin
-      @input.gets do |message, _timestamp|
+      each_message do |message, _timestamp|
         if should_process?(message)
           puts "[#{Time.now.strftime('%H:%M:%S.%L')}] #{format_event(message)}"
         end
@@ -66,7 +66,7 @@ class SequenceDetector < MIDIReader
     trap('INT') { stop }
 
     begin
-      @input.gets do |message, _timestamp|
+      each_message do |message, _timestamp|
         if (message[0] & 0xF0) == 0x90
           note = message[1]
           @note_sequence << note
@@ -107,7 +107,7 @@ class CCMonitor < MIDIReader
     trap('INT') { stop }
 
     begin
-      @input.gets do |message, _timestamp|
+      each_message do |message, _timestamp|
         if (message[0] & 0xF0) == 0xB0
           cc_number = message[1]
           if @cc_numbers.include?(cc_number)
