@@ -1,0 +1,4 @@
+plugins:
+  - jekyll-lilypond
+lilypond:
+  format: svg
