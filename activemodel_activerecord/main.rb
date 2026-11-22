@@ -3,7 +3,9 @@
 
 require 'active_record'
 
-ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: ':memory:')
+database = 'database.db' # ':memory:'
+
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: database)
 ActiveRecord::Schema.verbose = false
 
 ActiveRecord::Schema.define do
